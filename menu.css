@@ -114,7 +114,7 @@ header {
 }
 
 /* desktop */
-@media (min-width: 765px) {
+@media (min-width: 900px) {
   /* Hide burger menu  */
   .burger-menu {
     display: none;

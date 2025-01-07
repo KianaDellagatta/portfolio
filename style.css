@@ -188,7 +188,45 @@ ul li {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 900px) {
+  .h1p {
+    margin-top: 2rem;
+    font-size: 4.5rem;
+    margin-left: 2rem;
+  }
+
+  .grid_1_1 {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 3rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    width: 100%;
+    margin-top: 3rem;
+    aspect-ratio: 20/9;
+    position: relative;
+  }
+
+  .col1 {
+    padding-right: 2rem;
+  }
+
+  /* Ensure image container does not get bigger */
+  .col2 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .logo2 {
     width: 200px; /* fixed width */
     position: sticky;
@@ -291,40 +329,6 @@ ul li {
     border-radius: 1rem;
     margin-bottom: 2rem;
     max-width: 500px; /* stop from growing larger than 500px */
-  }
-}
-
-@media (min-width: 900px) {
-  .h1p {
-    margin-top: 2rem;
-    font-size: 4.5rem;
-    margin-left: 2rem;
-  }
-
-  .grid_1_1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 0 3rem;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-  }
-
-  .col1 {
-    padding-right: 2rem;
-  }
-
-  /* Ensure image container does not get bigger */
-  .col2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
