@@ -1,0 +1,386 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#screen {
+  width: 100%;
+  margin-top: 3rem;
+  aspect-ratio: 20/9;
+  position: relative;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#start_knap {
+  width: 40%;
+  position: absolute;
+  top: 220%;
+  left: 30%;
+  aspect-ratio: 350/127;
+  background-image: url(portfoliobillede/kilkher2.svg);
+  background-size: cover;
+  animation-name: pulse_kf;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse_kf {
+  100% {
+    scale: 1.2;
+  }
+}
+
+#overlay_container {
+  width: 33.5%;
+  aspect-ratio: 229/239;
+  position: absolute;
+  top: 293%;
+  left: 36.2%;
+}
+
+#overlay_sprite {
+  background-image: url(portfoliobillede/overlay.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#polaroid_container {
+  width: 45%;
+  aspect-ratio: 353/414;
+  position: absolute;
+  top: 260%;
+  left: 30%;
+}
+
+#polaroid_sprite {
+  background-image: url(portfoliobillede/animaiton-01.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#polaroid_container2 {
+  width: 52.4%;
+  aspect-ratio: 400/354.25;
+  position: absolute;
+  top: 260.1%;
+  left: 26.5%;
+}
+
+#polaroid_sprite2 {
+  background-image: url(portfoliobillede/animaiton-02.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#picture_container {
+  width: 37%;
+  aspect-ratio: 258/366;
+  position: absolute;
+  top: 270%;
+  left: 34%;
+}
+
+#picture_sprite {
+  background-image: url(portfoliobillede/animaiton-03.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.fald {
+  animation-name: fald_kf;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes fald_kf {
+  100% {
+    translate: 0 90%;
+  }
+}
+
+@keyframes fald2_kf {
+  0% {
+    transform: translateY(0); /* Starting position */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(150px); /* Fall down (reduced distance) */
+    opacity: 1; /* Still fully visible */
+  }
+  70% {
+    transform: translateY(150px); /* Pause the fall */
+    opacity: 1; /* Still fully visible */
+  }
+  100% {
+    transform: translateY(120px) scale(2); /* Expand and move up slightly */
+    opacity: 0; /* Fade out */
+  }
+}
+
+.fald2 {
+  animation: fald2_kf 3s ease-in-out forwards; /* Animation lasts 3 seconds */
+}
+
+/* for polaroid picture */
+@keyframes fallPauseExpand {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(150px); /* Fall down (reduced distance) */
+  }
+  70% {
+    transform: translateY(150px); /* Pause the fall */
+  }
+  100% {
+    transform: translateY(120px) scale(2); /* Expand and move up slightly */
+  }
+}
+
+.print {
+  animation: fallPauseExpand 3s ease-in-out forwards;
+}
+
+/* For polaroid camera */
+@keyframes stayThenFade {
+  0% {
+    opacity: 1; /* Fully visible at the start */
+  }
+  90% {
+    opacity: 1; /* Stay visible for most of the time (3 seconds) */
+  }
+  100% {
+    opacity: 0; /* Fade to invisible */
+  }
+}
+
+.fade {
+  animation: stayThenFade 2.5s ease-in-out forwards;
+}
+
+@media (min-width: 900px) {
+  #screen {
+    width: 100%;
+    margin-top: 3rem;
+    aspect-ratio: 16/9;
+    position: relative;
+  }
+
+  #game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #start_knap {
+    width: 15%;
+    position: absolute;
+    top: 1%;
+    left: 73%;
+    aspect-ratio: 350/127;
+    background-image: url(portfoliobillede/kilkher2.svg);
+    background-size: cover;
+    animation-name: pulse_kf;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes pulse_kf {
+    100% {
+      scale: 1.2;
+    }
+  }
+
+  #overlay_container {
+    width: 11.8%;
+    aspect-ratio: 229/239;
+    position: absolute;
+    top: 31.3%;
+    left: 74.22%;
+  }
+
+  #overlay_sprite {
+    background-image: url(portfoliobillede/overlay.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  #polaroid_container {
+    width: 20%;
+    aspect-ratio: 353/414;
+    position: absolute;
+    top: 15%;
+    left: 70%;
+  }
+
+  #polaroid_sprite {
+    background-image: url(portfoliobillede/animaiton-01.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  #polaroid_container2 {
+    width: 22.5%;
+    aspect-ratio: 400/354.25;
+    position: absolute;
+    top: 15.1%;
+    left: 68.6%;
+  }
+
+  #polaroid_sprite2 {
+    background-image: url(portfoliobillede/animaiton-02.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  #picture_container {
+    width: 13%;
+    aspect-ratio: 258/366;
+    position: absolute;
+    top: 25%;
+    left: 73.5%;
+  }
+
+  #picture_sprite {
+    background-image: url(portfoliobillede/animaiton-03.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .frys {
+    animation-play-state: paused;
+  }
+
+  .fald {
+    animation-name: fald_kf;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fald_kf {
+    100% {
+      translate: 0 90%;
+    }
+  }
+
+  @keyframes fald2_kf {
+    0% {
+      transform: translateY(0); /* Starting position */
+      opacity: 1; /* Fully visible */
+    }
+    50% {
+      transform: translateY(150px); /* Fall down (reduced distance) */
+      opacity: 1; /* Still fully visible */
+    }
+    70% {
+      transform: translateY(150px); /* Pause the fall */
+      opacity: 1; /* Still fully visible */
+    }
+    100% {
+      transform: translateY(120px) scale(2); /* Expand and move up slightly */
+      opacity: 0; /* Fade out */
+    }
+  }
+
+  .fald2 {
+    animation: fald2_kf 3s ease-in-out forwards; /* Animation lasts 3 seconds */
+  }
+
+  /* for polaroid picture */
+  @keyframes fallPauseExpand {
+    0% {
+      transform: translateY(0); /* Starting position */
+    }
+    50% {
+      transform: translateY(150px); /* Fall down (reduced distance) */
+    }
+    70% {
+      transform: translateY(150px); /* Pause the fall */
+    }
+    100% {
+      transform: translateY(120px) scale(2); /* Expand and move up slightly */
+    }
+  }
+
+  .print {
+    animation: fallPauseExpand 3s ease-in-out forwards;
+  }
+
+  /* For polaroid camera */
+  @keyframes stayThenFade {
+    0% {
+      opacity: 1; /* Fully visible at the start */
+    }
+    90% {
+      opacity: 1; /* Stay visible for most of the time (3 seconds) */
+    }
+    100% {
+      opacity: 0; /* Fade to invisible */
+    }
+  }
+
+  .fade {
+    animation: stayThenFade 2.5s ease-in-out forwards;
+  }
+
+  .h1p {
+    margin-top: 2rem;
+    font-size: 4.5rem;
+    margin-left: 2rem;
+  }
+  .grid_1_1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 3rem;
+  }
+
+  /* Grid layout for larger screens */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .col1 {
+    padding-right: 2rem;
+  }
+
+  /* Ensure image container does not grow */
+  .col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,40 @@
+/* Variable */
+:root {
+  --primary: black;
+
+  /* H1 font */
+  --main_font: "kalnia", sans-serif;
+
+  /* H2 font */
+  --h2_font: "montserrat alternates";
+
+  /* Brødtekst font */
+  --p_font: "nunito";
+
+  --h3_weight: 600;
+}
+
+/* Fonte */
+h1 {
+  font-family: var(--main_font);
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: var(--h2_font);
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+p {
+  font-family: var(--p_font);
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+h3 {
+  font-weight: var(--h3_weight);
+}

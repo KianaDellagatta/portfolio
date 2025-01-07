@@ -1,0 +1,180 @@
+/* Body styling */
+body {
+  margin: 0; /* Removes default margin */
+  font-family: "montserrat alternates", sans-serif; /* Applies Montserrat Alternates font to body */
+}
+
+/* Header styling */
+header {
+  position: relative; /* Allows for absolute positioning of child elements */
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Aligns child elements vertically at the center */
+  justify-content: space-between; /* space between elements */
+  padding: 10px 20px; /* Adds padding to header */
+}
+
+/* Logo styling */
+.logo {
+  display: none; /* hides the logo when in mobil view*/
+}
+
+/* Burger menu button styling */
+.burger-menu {
+  position: fixed; /* Fixes the position of the burger menu on the screen */
+  top: 20px; /* Positions it 20px from the top */
+  right: 20px; /* Positions it 20px from the right */
+  display: flex; /* Uses flexbox layout */
+  flex-direction: column; /* Align vertically */
+  justify-content: space-between; /* Adds space between the lines of the burger */
+  width: 30px; /* width of the burger button */
+  height: 25px; /* height of the burger button */
+  cursor: pointer; /* cursor to pointer on hover */
+  z-index: 1000; /* So the burger menu is on top of other elements */
+}
+
+/* Burger menu lines styling */
+.burger-menu div {
+  width: 30px; /*  width of each line */
+  height: 4px; /* height of each line */
+  background-color: black; /* Sets color of each line */
+  transition: all 0.3s ease; /* smooth transition effect when the lines change */
+}
+
+/* Menu styling */
+.menu {
+  position: fixed; /* Fixes the menu to the screen */
+  top: 0; /* Aligns  to the top of the screen */
+  right: -100%; /*  hides the menu off-screen */
+  width: 100%; /*  menu full-width */
+  height: 100%; /* menu full-height */
+  background-image: url(portfoliobillede/background2.webp); /* background image */
+  background-size: cover;
+  color: black; /* text color black */
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* menu vertically */
+  align-items: center; /* menu horizontally */
+  justify-content: center; /*  menu items vertically */
+  gap: 20px; /* space between the menu items */
+  transition: right 0.3s ease; /* smooth  when the menu opens */
+  z-index: 999; /* menu is behind the burger menu */
+}
+
+/* Menu link styling */
+.menu a {
+  color: black; /* text color */
+  text-decoration: none;
+  font-size: 30px;
+  position: relative; /* for the ::after pseudo-element */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for menu links */
+.menu a:hover {
+  color: #f39c12; /* text color to orange when hovering */
+  transform: scale(1.1); /* scale on hover */
+}
+
+/* Styling for the after pseudo-element of menu links */
+.menu a::after {
+  content: ""; /* empty pseudo-element */
+  position: absolute; /* Positions it absolutely relative to the link */
+  width: 0; /* hides the underline */
+  height: 2px; /* the height of the underline */
+  bottom: -5px; /* underline slightly below the link */
+  left: 50%; /* underline horizontally */
+  background-color: #f39c12; /* underline color to orange */
+  transition: width 0.3s ease, left 0.3s ease; /* smooth transition effect */
+}
+
+/* Hover effect for the underline */
+.menu a:hover::after {
+  width: 100%; /* undline gets bigger */
+  left: 0; /* Positions the underline at the left of the link */
+}
+
+/* Menu openstyling */
+
+.menu.open {
+  right: 0; /* Moves the menu into view */
+}
+
+/* Burger menu open state line 1 */
+.burger-menu.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Rotates the first line to form an 'X' */
+}
+
+/* Burger menu open state line 2 */
+.burger-menu.open div:nth-child(2) {
+  opacity: 0; /* Hides the second line when the menu is open */
+}
+
+/* Burger menu open state line 3 */
+.burger-menu.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Rotates the third line to form an 'X' */
+}
+
+/* desktop */
+@media (min-width: 765px) {
+  /* Hide burger menu  */
+  .burger-menu {
+    display: none;
+  }
+
+  /* menu layout */
+  .menu {
+    position: relative; /* Removes fixed positioning */
+    display: flex; /* flexbox layout */
+    flex-direction: row; /* menu horizontal */
+    justify-content: flex-end; /* menu items to the right */
+    gap: 20px;
+    width: auto; /* Resize the menu width */
+    height: auto; /* Resize the menu height */
+    background: none; /* Remove background image */
+    right: 0; /* makes menu is visible */
+  }
+
+  /* so now logo is visivle */
+  .logo {
+    display: block;
+  }
+
+  /* Menu link styling for desktop */
+  .menu a {
+    font-family: "montserrat alternates";
+    font-size: 30px;
+    color: black;
+    padding: 7px 20px; /* Adds padding around the links */
+    border: 2px solid transparent; /* Adds border, first transparent */
+    border-radius: 8px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /*  smooth transitions */
+  }
+
+  /* Hover effect for menu links on desktop */
+  .menu a:hover {
+    border-color: black; /* border color to black on hover */
+    color: black; /*  text color black and not orange*/
+    transform: scale(1.1);
+  }
+
+  /* Styling for the after pseudo-element of desktop menu links */
+  .menu a::after {
+    position: absolute; /* Positions the svg next to the link */
+    top: 50%; /* Vertically centers the svg */
+    right: -65px; /* Positions the svg to the right of the link */
+    width: 25px; /* Sets the width of the svg */
+    height: 25px; /* Sets the height of the svg */
+    background-image: url(portfoliobillede/stars.svg); /*  background image to a star svg */
+    background-size: contain; /*  svg fits within the size */
+    background-repeat: no-repeat;
+    opacity: 0; /* hides the svg */
+    transform: translateY(-50%); /* Vertically centers the svg */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Adds smooth transition effects */
+    background-color: transparent; /* background is transparent */
+  }
+
+  /* Hover effect for the icon next to menu links on desktop */
+  .menu a:hover::after {
+    opacity: 1; /* visible the svg on hover */
+    transform: translateY(-50%) translateX(5px); /* icon slightly to the right */
+  }
+}
