@@ -18,7 +18,7 @@
 h1 {
   font-family: var(--main_font);
   color: var(--primary);
-  font-size: 5rem;
+  font-size: 4.3rem;
   font-weight: 500;
 }
 
@@ -37,4 +37,13 @@ p {
 
 h3 {
   font-weight: var(--h3_weight);
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-family: var(--main_font);
+    color: var(--primary);
+    font-size: 5rem;
+    font-weight: 500;
+  }
 }

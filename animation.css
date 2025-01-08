@@ -7,7 +7,7 @@
 
 #start_knap {
   width: 40%;
-  position: sticky;
+  position: absolute;
   top: 60%;
   left: 30%;
   aspect-ratio: 350/127;
